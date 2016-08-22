@@ -1,6 +1,6 @@
 A simple library for recognizing capcha images with the antigate.com service.
 Usage is very simple, just see the example below.
-```
+```java
 import j.antigate.*;
 public class TypicalAntigate{
 	 static String answer;
@@ -22,12 +22,12 @@ public class TypicalAntigate{
 ```
 Method parameters are:
 
-```
+```java
 CapchaAnswer(InputStream, "YOURAPIKEY", "YES/NO for multiple words", "YES/NO for reg sensivity", "YES/NO for russian lang");
 ```
 You can just write `null` for these optional parameters.
 If any error aperas, the CapchaAnswer() returns the error code. Here is what it means:
-```
+```xml
 ERROR_WRONG_USER_KEY|user authorization key is invalid (its length is not 32 bytes as it should be)
 ERROR_KEY_DOES_NOT_EXIST|you have set wrong user authorization key in request
 ERROR_ZERO_BALANCE|account has zero or negative balance
